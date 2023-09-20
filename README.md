@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Frontend Mentor solution page](https://www.frontendmentor.io/solutions/responsive-social-proof-section-challenge-ywNlf_P2ZK)
 - Live Site URL: [lairdfire.github.io/social-proof-section/](lairdfire.github.io/social-proof-section/)
 
 ## My process
