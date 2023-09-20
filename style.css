@@ -88,6 +88,7 @@ h6 {
 /* General mobile styling */
 
 body {
+  height: 100%;
   font-size: 15px;
   font-family: "League Spartan", sans-serif;
   padding: 82px 24px 100px 24px;
@@ -122,7 +123,7 @@ body {
   flex-direction: column;
   max-width: 445px;
   gap: 15px;
-  margin :40px auto 50px auto;
+  margin: 40px auto 50px auto;
 }
 
 .rating-card {
@@ -151,11 +152,11 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px
+  gap: 16px;
 }
 
 .review-card-container {
-  display: flex ;
+  display: flex;
   align-items: center;
 }
 
@@ -203,25 +204,29 @@ body {
 
 @media screen and (min-width: 1439px) {
   body {
+    width: 1440px;
+    height: 100vh;
+    margin: 0 auto;
     padding: 145px 165px 100px 165px;
+    background: url("./images/bg-pattern-bottom-desktop.svg") right bottom no-repeat, url("./images/bg-pattern-top-desktop.svg") left top no-repeat;
   }
-  
+
   .flex-container-desktop {
     display: flex;
     align-content: flex-start;
   }
-  
+
   .intro__title {
     font-size: 56px;
     line-height: 48px;
     letter-spacing: -2px;
     text-align: left;
   }
-  
+
   .intro__text {
     text-align: left;
   }
-  
+
   .rating-container {
     margin-right: 0;
     margin-top: 0;
@@ -231,19 +236,18 @@ body {
     transform: translatex(-100px);
   }
 
-  .rating-container > :first-child {
-    transform: translatex(-300px);
+  .rating-container > :nth-child(2) {
+    transform: translatex(-50px);
   }
-  
+
   .rating-card {
     display: flex;
     align-items: center;
     border-radius: 8px;
     background-color: var(--clr-neutral-lightgraymagenta);
     padding: 20px auto 20px 32px;
-    
   }
-  
+
   .rating-card__note {
     display: inline-block;
     color: var(--clr-primary-darkmagenta);
@@ -252,4 +256,25 @@ body {
     padding-left: 32px;
   }
 
+  .review-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 70px;
+  }
+
+  .review-card {
+    background-color: var(--clr-primary-darkmagenta);
+    padding: 40px 32px 35px 32px;
+    border-radius: 8px;
+    max-width: 350px;
+  }
+
+  .review-container > :nth-child(2) {
+    transform: translatey(16px);
+  }
+
+  .review-container > :last-child {
+    transform: translatey(32px);
+  }
 }
