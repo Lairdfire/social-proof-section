@@ -1,0 +1,255 @@
+:root {
+  /* Primary */
+  --clr-primary-darkmagenta: hsl(300, 43%, 22%);
+  --clr-primary-softpink: hsl(333, 80%, 67%);
+
+  /* Neutral */
+  --clr-neutral-darkgraymagenta: hsl(303, 10%, 53%);
+  --clr-neutral-lightgraymagenta: hsl(300, 24%, 96%);
+  --clr-white: hsl(0, 0%, 100%);
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+
+  --img-size: 17px;
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  border: none;
+  box-sizing: border-box;
+}
+
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+    5. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+    6. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+    7. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+    8. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* General mobile styling */
+
+body {
+  font-size: 15px;
+  font-family: "League Spartan", sans-serif;
+  padding: 82px 24px 100px 24px;
+  background: url("./images/bg-pattern-top-mobile.svg") left top no-repeat,
+    url("./images/bg-pattern-bottom-mobile.svg") bottom no-repeat;
+}
+
+.intro__title {
+  max-width: 445px;
+  text-align: center;
+  color: var(--clr-primary-darkmagenta);
+  font-size: 40px;
+  font-weight: var(--fw-bold);
+  line-height: 32px;
+  letter-spacing: -1.429px;
+  margin: 0 auto;
+}
+
+.intro__text {
+  max-width: 445px;
+  color: var(--clr-neutral-darkgraymagenta);
+  margin: 16px auto;
+  text-align: center;
+  font-size: 19px;
+  font-weight: var(--fw-medium);
+  line-height: 25px;
+  letter-spacing: -0.633px;
+}
+
+.rating-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 445px;
+  gap: 15px;
+  margin :40px auto 50px auto;
+}
+
+.rating-card {
+  width: 100%;
+  border-radius: 8px;
+  background-color: var(--clr-neutral-lightgraymagenta);
+  padding: 15px 55px 15px 55px;
+  text-align: center;
+}
+
+.rating-card__stars {
+  display: inline-block;
+  width: calc(5 * var(--img-size));
+  height: 20px;
+  background-image: url("./images/icon-star.svg");
+  background-repeat: repeat-x;
+}
+
+.rating-card__note {
+  color: var(--clr-primary-darkmagenta);
+  font-size: 17px;
+  font-weight: var(--fw-bold);
+}
+
+.review-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px
+}
+
+.review-card-container {
+  display: flex ;
+  align-items: center;
+}
+
+.review-card {
+  background-color: var(--clr-primary-darkmagenta);
+  padding: 40px 32px 32px 32px;
+  border-radius: 8px;
+  max-width: 445px;
+}
+
+.review-card__pic {
+  border-radius: 20px;
+  margin-right: 24px;
+  width: 40px;
+  height: 40px;
+}
+
+.review-card__name {
+  font-size: 17px;
+  color: var(--clr-white);
+  font-weight: var(--fw-bold);
+}
+
+.review_card__verified {
+  color: var(--clr-primary-softpink);
+  font-size: 17px;
+  font-weight: var(--fw-regular);
+}
+
+.review_card__text {
+  color: var(--clr-white);
+  font-size: 17px;
+  font-weight: var(--fw-medium);
+  margin-top: 23px;
+  line-height: 22px;
+  letter-spacing: -0.304px;
+}
+
+@media screen and (min-width: 376px) {
+  body {
+    background: url("./images/bg-pattern-top-desktop.svg") left top no-repeat,
+      url("./images/bg-pattern-bottom-desktop.svg") right bottom no-repeat;
+  }
+}
+
+@media screen and (min-width: 1439px) {
+  body {
+    padding: 145px 165px 100px 165px;
+  }
+  
+  .flex-container-desktop {
+    display: flex;
+    align-content: flex-start;
+  }
+  
+  .intro__title {
+    font-size: 56px;
+    line-height: 48px;
+    letter-spacing: -2px;
+    text-align: left;
+  }
+  
+  .intro__text {
+    text-align: left;
+  }
+  
+  .rating-container {
+    margin-right: 0;
+    margin-top: 0;
+  }
+
+  .rating-container > :first-child {
+    transform: translatex(-100px);
+  }
+
+  .rating-container > :first-child {
+    transform: translatex(-300px);
+  }
+  
+  .rating-card {
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    background-color: var(--clr-neutral-lightgraymagenta);
+    padding: 20px auto 20px 32px;
+    
+  }
+  
+  .rating-card__note {
+    display: inline-block;
+    color: var(--clr-primary-darkmagenta);
+    font-size: 17px;
+    font-weight: var(--fw-bold);
+    padding-left: 32px;
+  }
+
+}
